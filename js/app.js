@@ -127,7 +127,7 @@ function renderTypesGrid() {
 }
 
 function wireGlobalButtons() {
-  $$('[data-open-generator]').forEach(b => b.addEventListener('click', () => openGenerator()));
+  $$('[data-open-generator]').forEach(b => b.addEventListener('click', () => openGenerator(b.dataset.type || null)));
   $$('[data-close-generator]').forEach(b => b.addEventListener('click', closeGenerator));
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeGenerator(); });
 }
