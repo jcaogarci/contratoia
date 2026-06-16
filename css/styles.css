@@ -433,3 +433,51 @@ em { font-style: normal; color: var(--seal); }
   font-family: var(--display); font-size: .92rem; z-index: 200; box-shadow: var(--shadow);
   animation: pop .25s ease;
 }
+
+/* ============================================================
+   Páginas SEO (contenido por tipo de contrato)
+   ============================================================ */
+.lp-hero {
+  max-width: var(--maxw); margin: 0 auto;
+  padding: clamp(2.5rem, 6vw, 4.5rem) 1.5rem 2rem;
+}
+.lp-hero__crumb { font-family: var(--display); font-size: .85rem; color: var(--ink-soft); margin-bottom: 1.2rem; }
+.lp-hero__crumb a { color: var(--seal-deep); }
+.lp-hero h1 {
+  font-family: var(--display); font-weight: 600;
+  font-size: clamp(2rem, 4.5vw, 3.1rem); line-height: 1.08; letter-spacing: -.025em;
+  max-width: 24ch; margin-bottom: 1rem;
+}
+.lp-hero__lead { font-size: 1.15rem; color: var(--ink-soft); max-width: 42rem; margin-bottom: 1.6rem; }
+.lp-hero__cta { display: flex; gap: .8rem; flex-wrap: wrap; align-items: center; }
+.lp-hero__note { font-family: var(--display); font-size: .9rem; color: var(--ink-soft); margin-top: 1rem; }
+
+.lp-body { max-width: 46rem; margin: 0 auto; padding: 1.5rem 1.5rem 4rem; }
+.lp-body h2 {
+  font-family: var(--display); font-weight: 600; font-size: clamp(1.4rem, 2.6vw, 1.8rem);
+  letter-spacing: -.02em; margin: 2.4rem 0 .9rem;
+}
+.lp-body h3 { font-family: var(--display); font-weight: 600; font-size: 1.12rem; margin: 1.5rem 0 .5rem; }
+.lp-body p { color: var(--ink); margin-bottom: 1rem; }
+.lp-body ul { margin: 0 0 1.2rem 1.2rem; color: var(--ink); }
+.lp-body li { margin-bottom: .5rem; }
+.lp-body strong { font-weight: 600; }
+
+.lp-callout {
+  background: var(--ink); color: var(--paper); border-radius: var(--radius);
+  padding: 1.8rem; margin: 2.4rem 0; text-align: center;
+}
+.lp-callout h3 { font-family: var(--display); font-weight: 600; font-size: 1.3rem; margin-bottom: .5rem; color: var(--paper); }
+.lp-callout p { color: #C4CCC8; margin-bottom: 1.2rem; }
+.lp-callout .btn--primary { background: var(--seal); color: var(--ink); }
+.lp-callout .btn--primary:hover { background: var(--seal-deep); }
+
+.lp-related { border-top: 1px solid var(--line); margin-top: 2.5rem; padding-top: 1.5rem; }
+.lp-related h2 { margin-top: 0; }
+.lp-related__links { display: flex; flex-wrap: wrap; gap: .6rem; }
+.lp-related__links a {
+  font-family: var(--display); font-size: .92rem; color: var(--ink);
+  border: 1px solid var(--line); border-radius: 100px; padding: .4rem .9rem;
+  transition: border-color .2s, background .2s;
+}
+.lp-related__links a:hover { border-color: var(--seal); background: var(--white); }
