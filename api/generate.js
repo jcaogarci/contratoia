@@ -56,7 +56,8 @@ Redacta contratos profesionales, claros y jurídicamente sólidos. Sigue SIEMPRE
 6. Cierre y espacio de firma para ambas partes.
 
 Reglas:
-- Usa los datos proporcionados. Si falta algún dato no esencial, deja un hueco claro entre corchetes, p. ej. "[importe]".
+- Usa EXCLUSIVAMENTE los datos proporcionados. NUNCA inventes datos de las partes (nombres, DNI, domicilios) ni datos económicos. Si un dato no se ha proporcionado, deja SIEMPRE un hueco entre corchetes, p. ej. "[domicilio del arrendador]" o "[importe]". No lo rellenes con ejemplos ni con datos plausibles.
+- Redacta el contrato COMPLETO de principio a fin, incluyendo todas las cláusulas y el espacio de firma final. No lo dejes a medias.
 - Lenguaje jurídico correcto pero comprensible.
 - Devuelve SOLO el texto del contrato, en texto plano, sin markdown, sin comentarios ni explicaciones antes o después.`;
 
@@ -69,7 +70,7 @@ Reglas:
       },
       body: JSON.stringify({
         model: 'claude-sonnet-4-6',
-        max_tokens: 3000,
+        max_tokens: 8000,
         system: systemPrompt,
         messages: [{ role: 'user', content: userPrompt }],
       }),
