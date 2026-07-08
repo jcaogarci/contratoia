@@ -481,3 +481,43 @@ em { font-style: normal; color: var(--seal); }
   transition: border-color .2s, background .2s;
 }
 .lp-related__links a:hover { border-color: var(--seal); background: var(--white); }
+
+/* ============================================================
+   MEJORAS RESPONSIVE — MÓVIL
+   ============================================================ */
+@media (max-width: 760px) {
+  /* Hero: apilar en una sola columna (texto arriba, documento debajo) */
+  .hero { padding: 2.5rem 1.25rem 3.25rem; }
+  .hero__grid { grid-template-columns: 1fr; gap: 2.4rem; }
+  .hero__lead { max-width: 100%; }
+  .hero__doc { justify-content: flex-start; }
+  .hero__doc .paper { transform: none; max-width: 360px; }
+
+  /* Generador: aprovechar toda la pantalla */
+  .generator { padding: 0; }
+  .generator__panel { max-width: 100%; max-height: 100%; height: 100%; border-radius: 0; }
+  .generator__form { padding: 1.5rem 1.15rem 1.7rem; }
+  .generator__close { top: .7rem; right: .7rem; }
+
+  /* Barra de progreso con scroll horizontal si no cabe */
+  .progress { padding: 1rem 1.15rem; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .progress__step { flex: 0 0 auto; }
+}
+
+@media (max-width: 480px) {
+  .nav__inner { padding: .8rem 1.15rem; }
+  .brand { font-size: 1.12rem; }
+  .hero__title { font-size: clamp(2rem, 8.5vw, 2.55rem); }
+  .hero__lead { font-size: 1.05rem; }
+
+  /* CTAs del hero a ancho completo (más fáciles con el pulgar) */
+  .hero__actions { flex-direction: column; align-items: stretch; }
+  .hero__actions .btn { width: 100%; }
+
+  /* Navegación del formulario cómoda */
+  .gf__nav { gap: .6rem; }
+  .gf__nav .btn { flex: 1; }
+  .gf__title { font-size: 1.25rem; }
+  .result__doc { padding: 1.15rem; font-size: .92rem; }
+  .progress__step { font-size: .78rem; padding: .28rem .6rem; }
+}
